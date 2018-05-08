@@ -1,5 +1,5 @@
-lxc.tty = 4
-lxc.pts = 1024
+lxc.tty.max = 4
+lxc.pty.max = 1024
 lxc.rootfs = ROOTFS
 lxc.arch = ARCH
 lxc.cgroup.devices.deny = a
@@ -28,10 +28,10 @@ lxc.mount.entry=sysfs ROOTFS/sys sysfs defaults  0 0
 # On the host, run: ifconfig br0 up 10.0.2.2
 # Alternatively, you can use another IP range for the bridge interface, in this case set
 # the environment variables GITIAN_HOST_IP and LXC_GUEST_IP appropriately.
-lxc.network.type = veth
-lxc.network.flags = up
-lxc.network.link = GUESTLINK
-lxc.network.ipv4 = GUESTIP/24
-lxc.network.ipv4.gateway = auto
+lxc.net.0.type = veth
+lxc.net.0.flags = up
+lxc.net.0.link = GUESTLINK
+lxc.net.0.ipv4.address = GUESTIP/24
+lxc.net.0.ipv4.gateway = auto
 
-lxc.utsname = gitian
+lxc.uts.name = gitian
