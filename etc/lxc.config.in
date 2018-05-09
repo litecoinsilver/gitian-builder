@@ -1,6 +1,6 @@
 lxc.tty.max = 4
 lxc.pty.max = 1024
-lxc.rootfs = ROOTFS
+lxc.rootfs.path = ROOTFS
 lxc.arch = ARCH
 lxc.cgroup.devices.deny = a
 # /dev/null and zero
